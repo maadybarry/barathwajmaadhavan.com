@@ -212,6 +212,32 @@ section:last-of-type {
     margin-bottom: 0.2rem;
 }
 
+/* ===== CERTIFICATIONS ===== */
+.cert-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 32px;
+}
+
+.cert-badge {
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.cert-issuer {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
 /* ===== PROJECTS ===== */
 .project-item {
     margin-bottom: 1.8rem;
@@ -578,6 +604,10 @@ section.contact {
 
     .exp-item ul li {
         font-size: 0.85rem;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr;
     }
 
     .project-item p {
