@@ -25,7 +25,7 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--bg);
     color: var(--text-primary);
-    line-height: 1.7;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     padding: 48px 24px;
     display: flex;
@@ -45,7 +45,7 @@ body {
 h1 {
     font-family: 'Space Grotesk', -apple-system, sans-serif;
     font-weight: 700;
-    font-size: 2.2rem;
+    font-size: 2rem;
     letter-spacing: -0.02em;
     line-height: 1.1;
     color: var(--text-primary);
@@ -56,7 +56,7 @@ h2 {
     font-weight: 700;
     font-size: 1.3rem;
     letter-spacing: -0.01em;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     color: var(--text-primary);
 }
 
@@ -72,27 +72,28 @@ li,
 .bio {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
+    font-size: 1rem;
     color: var(--text-secondary);
 }
 
 .tagline {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--text-muted);
-    margin: 0.2rem 0 1rem;
+    margin: 0.2rem 0 0.8rem;
 }
 
 .bio {
-    font-size: 1.05rem;
+    font-size: 1rem;
     max-width: 580px;
 }
 
 /* ===== STATUS LINE ===== */
 .status-line {
-    margin: 0.8rem 0 1.2rem;
+    margin: 0.6rem 0 1rem;
     font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: var(--text-muted);
     font-style: italic;
     min-height: 1.5rem;
@@ -161,7 +162,7 @@ section:last-of-type {
 .exp-meta {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     color: var(--text-muted);
     margin-bottom: 0.3rem;
 }
@@ -175,7 +176,7 @@ section:last-of-type {
     position: relative;
     padding-left: 20px;
     margin-bottom: 0.2rem;
-    font-size: 0.98rem;
+    font-size: 0.95rem;
 }
 
 .exp-item ul li::before {
@@ -196,7 +197,7 @@ section:last-of-type {
 }
 
 .project-item p {
-    font-size: 0.98rem;
+    font-size: 0.95rem;
     margin: 2px 0 4px;
 }
 
@@ -207,7 +208,7 @@ section:last-of-type {
 
 /* ===== CONTACT ===== */
 .contact-intro {
-    font-size: 1.05rem;
+    font-size: 1rem;
     margin-bottom: 1.2rem;
 }
 
@@ -222,7 +223,7 @@ section:last-of-type {
     align-items: center;
     gap: 8px;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 /* Tighten spacing to footer */
@@ -406,18 +407,15 @@ section.contact {
     }
 
     h1 {
-        font-size: 2rem;
-        /* was 2.2rem */
+        font-size: 1.7rem;
     }
 
     h2 {
         font-size: 1.2rem;
-        /* was 1.3rem */
     }
 
     h3 {
         font-size: 0.95rem;
-        /* was 1rem */
     }
 
     p,
@@ -427,11 +425,11 @@ section.contact {
     }
 
     .tagline {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .status-line {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     .social-links {
@@ -476,7 +474,7 @@ section.contact {
     }
 
     .contact-links a {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
     .footer {
@@ -513,18 +511,15 @@ section.contact {
     }
 
     h1 {
-        font-size: 1.6rem;
-        /* was 1.8rem */
+        font-size: 1.5rem;
     }
 
     h2 {
         font-size: 1.1rem;
-        /* was 1.2rem */
     }
 
     h3 {
         font-size: 0.9rem;
-        /* was 0.95rem */
     }
 
     p,
@@ -534,11 +529,11 @@ section.contact {
     }
 
     .tagline {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
     .status-line {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 
     .social-links {
@@ -571,7 +566,7 @@ section.contact {
     }
 
     .contact-links a {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     /* Fortune modal */
