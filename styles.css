@@ -363,29 +363,30 @@ section.contact {
 }
 
 /* ===== RESPONSIVE ===== */
+
+/* Tablets and small laptops */
 @media (max-width: 768px) {
     body {
-        padding: 32px 20px;
+        padding: 28px 20px;
     }
 
     h1 {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        /* ratio 1.47 vs body (0.95) – close to desktop 1.5 */
     }
 
     h3 {
-        font-size: 0.95rem;
+        font-size: 1.1rem;
+        /* ratio 1.16 – matches desktop 1.15 */
     }
 
     p,
     li,
-    .bio {
-        font-size: 0.95rem;
-    }
-
+    .bio,
     .tagline {
         font-size: 0.95rem;
     }
@@ -404,9 +405,18 @@ section.contact {
         height: 28px;
     }
 
+    .watch-link {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    .watch-link .watch-emoji {
+        font-size: 1.1rem;
+    }
+
     section {
-        margin-bottom: 2.4rem;
-        padding-bottom: 1.6rem;
+        margin-bottom: 1.8rem;
+        padding-bottom: 1rem;
     }
 
     section.contact {
@@ -415,7 +425,7 @@ section.contact {
     }
 
     .exp-item {
-        margin-bottom: 1.4rem;
+        margin-bottom: 1.2rem;
     }
 
     .exp-item ul li {
@@ -423,7 +433,7 @@ section.contact {
     }
 
     .project-item {
-        margin-bottom: 1.4rem;
+        margin-bottom: 1.2rem;
     }
 
     .project-item p {
@@ -431,7 +441,7 @@ section.contact {
     }
 
     .contact-links {
-        gap: 16px;
+        gap: 14px;
     }
 
     .contact-links a {
@@ -448,29 +458,30 @@ section.contact {
     }
 }
 
+/* Mobile phones */
 @media (max-width: 480px) {
     body {
-        padding: 24px 16px;
+        padding: 20px 16px;
     }
 
     h1 {
         font-size: 1.5rem;
+        /* ratio 1.67 vs body (0.9) – close to desktop 1.6 */
     }
 
     h2 {
-        font-size: 1.1rem;
+        font-size: 1.35rem;
+        /* ratio 1.5 – matches desktop exactly */
     }
 
     h3 {
-        font-size: 0.9rem;
+        font-size: 1.05rem;
+        /* ratio 1.17 – matches desktop 1.15 closely */
     }
 
     p,
     li,
-    .bio {
-        font-size: 0.9rem;
-    }
-
+    .bio,
     .tagline {
         font-size: 0.9rem;
     }
@@ -480,38 +491,79 @@ section.contact {
     }
 
     .social-links {
-        gap: 12px;
+        gap: 10px;
     }
 
     .social-links a {
         font-size: 1rem;
-        width: 26px;
-        height: 26px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .watch-link {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .watch-link .watch-emoji {
+        font-size: 0.95rem;
     }
 
     section {
-        margin-bottom: 2rem;
-        padding-bottom: 1.2rem;
+        margin-bottom: 1.6rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .exp-item {
+        margin-bottom: 1rem;
     }
 
     .exp-item ul li {
         font-size: 0.85rem;
+        padding-left: 16px;
+    }
+
+    .exp-item ul li::before {
+        font-size: 0.6rem;
+        top: 1px;
+    }
+
+    .edu-item {
+        margin-bottom: 1rem;
     }
 
     .cert-grid {
         grid-template-columns: 1fr;
+        gap: 8px 0;
+    }
+
+    .project-item {
+        margin-bottom: 1rem;
     }
 
     .project-item p {
         font-size: 0.85rem;
     }
 
+    .project-item a {
+        font-size: 0.85rem;
+    }
+
     .contact-links {
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
     }
 
     .contact-links a {
         font-size: 0.85rem;
+    }
+
+    .footer {
+        margin-top: 0.6rem;
+        padding-top: 0.8rem;
+    }
+
+    .footer p {
+        font-size: 0.75rem;
     }
 }
