@@ -153,7 +153,7 @@ a:hover {
     text-decoration: none;
 }
 
-.watch-link .watch-emoji {
+.watch-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,7 +169,7 @@ a:hover {
         height: 28px !important;
     }
 
-    .watch-link .watch-emoji {
+    .watch-link {
         font-size: 1.1rem;
     }
 }
@@ -180,7 +180,7 @@ a:hover {
         height: 26px !important;
     }
 
-    .watch-link .watch-emoji {
+    .watch-link {
         font-size: 1rem;
     }
 }
@@ -410,7 +410,7 @@ section.contact {
         height: 28px !important;
     }
 
-    .watch-link .watch-emoji {
+    .watch-link {
         font-size: 1.1rem;
     }
 
@@ -509,8 +509,8 @@ section.contact {
         height: 24px !important;
     }
 
-    .watch-link .watch-emoji {
-        font-size: 0.95rem;
+    .watch-link {
+        font-size: 0.90rem;
     }
 
     section {
