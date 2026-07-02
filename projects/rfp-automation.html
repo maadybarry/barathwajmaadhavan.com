@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RFP Automation Agent · Barathwaj Maadhavan</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+
+    <body>
+
+        <!-- ===== MAIN CONTAINER ===== -->
+        <main class="container">
+
+            <!-- ===== HEADER ===== -->
+            <header class="header" style="margin-bottom: 2rem;">
+                <h1>Barathwaj Maadhavan</h1>
+                <p class="tagline">Builder &amp; Watch Collector</p>
+            </header>
+
+            <!-- ===== BACK BUTTON ===== -->
+            <a href="../index.html#projects" class="back-button">
+                <i class="fas fa-arrow-left"></i> All Projects
+            </a>
+
+            <!-- ===== PROJECT CONTENT ===== -->
+            <section class="project-detail">
+                <h2>RFP Automation Agent</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.2rem;">Multi-source retrieval and generation system
+                    for enterprise proposals.</p>
+
+                <!-- ===== IMAGE 1: Chat Interface ===== -->
+                <figure class="project-figure">
+                    <img src="../assets/images/rfp_chat.png"
+                        alt="RFP Agent Chat Interface with confidence score and source citations"
+                        class="project-image" />
+                    <figcaption class="project-caption">Chat Interface – real-time Q&A with confidence scores and source
+                        citations.</figcaption>
+                </figure>
+
+                <!-- ===== OVERVIEW ===== -->
+                <div class="project-description">
+
+                    <h3>Overview</h3>
+                    <p>
+                        To streamline our client onboarding process, I architected an <strong>RFP Agent</strong>
+                        designed to automate the generation of complex proposals, which previously required
+                        time-intensive collaboration across multiple teams. Recognizing that our company holds a vast
+                        historical repository of responded RFPs, we developed a multi-source retrieval system that
+                        leverages these documents alongside real-time product data—queried via an MCP server—and live
+                        internet access for external market analysis.
+                    </p>
+                    <p>
+                        To ensure comprehensive coverage, the system also integrates various internal knowledge bases,
+                        including scraped data from internal web pages and product portals. The pipeline is built using
+                        <strong>LangGraph</strong>, which intelligently analyzes each incoming query, determines the
+                        appropriate knowledge sources to consult, synthesizes the information, and generates an accurate
+                        response.
+                    </p>
+
+                    <h3>The Challenge</h3>
+                    <p>
+                        Proposal generation was a time-intensive, manual process requiring coordination across sales,
+                        product, and legal teams. Turnaround times were slow, consistency varied across responses, and
+                        the process diverted valuable time from strategic client engagement.
+                    </p>
+
+                    <!-- ===== KEY FEATURES ===== -->
+                    <h3>Key Features</h3>
+
+                    <!-- ===== FEATURE 1: Chat Interface ===== -->
+                    <div class="feature-block">
+                        <h4>Chat Interface</h4>
+                        <p>
+                            Allows sales teams to engage in real-time Q&A for quick client queries, providing not only
+                            the generated response but also the <strong>confidence score</strong> and the specific
+                            <strong>knowledge sources cited</strong>.
+                        </p>
+                    </div>
+
+                    <!-- ===== IMAGE 2: Bulk Document Generation ===== -->
+                    <figure class="project-figure">
+                        <img src="../assets/images/rfp_docgen.png"
+                            alt="Bulk document generation with structured Excel output" class="project-image" />
+                        <figcaption class="project-caption">Bulk Document Generation – processes entire RFP documents
+                            into structured Excel outputs.</figcaption>
+                    </figure>
+
+                    <!-- ===== FEATURE 2: Bulk Generation ===== -->
+                    <div class="feature-block">
+                        <h4>Bulk Document Generation</h4>
+                        <p>
+                            This feature takes an entire RFP document as an upload, systematically extracts every
+                            question, and outputs a structured <strong>Excel file</strong> containing the original
+                            questions, generated responses, and associated confidence scores for each entry.
+                        </p>
+                    </div>
+
+                    <!-- ===== IMAGE 3: Knowledge Management UI ===== -->
+                    <figure class="project-figure">
+                        <img src="../assets/images/rfp_corpusmng.png"
+                            alt="User-friendly knowledge management interface for document uploads"
+                            class="project-image" />
+                        <figcaption class="project-caption">Knowledge Management UI – upload documents and sync to S3
+                            with one click.</figcaption>
+                    </figure>
+
+                    <!-- ===== FEATURE 3: Knowledge Management ===== -->
+                    <div class="feature-block">
+                        <h4>User-Friendly Knowledge Management</h4>
+                        <p>
+                            To eliminate backend manual processes, I created a dedicated UI where users can upload new
+                            contextual documents and trigger an <strong>S3 synchronization</strong> to the knowledge
+                            base with a single click, ensuring the agent remains updated without technical intervention.
+                        </p>
+                    </div>
+
+                    <h3>Results &amp; Impact</h3>
+                    <ul>
+                        <li><strong>Weeks → hours</strong> – transformed a weeks-long response process into hours.</li>
+                        <li><strong>95% accuracy</strong> on first-draft responses.</li>
+                        <li><strong>Deployed and actively used</strong> by client engagement and sales teams.</li>
+                        <li><strong>Shifted focus</strong> from repetitive drafting to high-value, creative strategy.
+                        </li>
+                    </ul>
+
+                    <h3>Key Learnings</h3>
+                    <p>
+                        Building the RFP Agent reinforced the power of multi-source retrieval. The combination of
+                        historical RFPs, live product data, and internal knowledge bases created a system that is both
+                        comprehensive and accurate. I also learned the importance of confidence scoring and source
+                        attribution – users need to trust the system's outputs, and transparency is key to building that
+                        trust.
+                    </p>
+
+                </div>
+
+                <!-- ===== TECH STACK ===== -->
+                <div class="project-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">LangGraph</span>
+                    <span class="skill-tag">RAG</span>
+                    <span class="skill-tag">MCP Server</span>
+                    <span class="skill-tag">AWS S3</span>
+                    <span class="skill-tag">Vector DB</span>
+                    <span class="skill-tag">KnowledgeBases AWS Service</span>
+                </div>
+            </section>
+
+            <!-- ===== FOOTER ===== -->
+            <footer class="footer" style="margin-top: 3rem;">
+                <p>&copy; 2026 Barathwaj Maadhavan</p>
+            </footer>
+
+        </main>
+
+        <!-- ===== PAGE-SPECIFIC STYLES ===== -->
+        <style>
+            .back-button {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.9rem;
+                color: var(--text-muted);
+                text-decoration: none;
+                margin-bottom: 1.2rem;
+                transition: color 0.2s;
+            }
+
+            .back-button:hover {
+                color: var(--text-primary);
+            }
+
+            .project-figure {
+                margin: 1.6rem 0;
+            }
+
+            .project-image {
+                width: 100%;
+                max-width: 700px;
+                border-radius: 12px;
+                border: 1px solid var(--border);
+                display: block;
+            }
+
+            .project-caption {
+                font-family: 'Inter', sans-serif;
+                font-size: 0.85rem;
+                color: var(--text-muted);
+                margin-top: 0.4rem;
+                font-style: italic;
+            }
+
+            .project-description h3 {
+                font-family: 'Space Grotesk', -apple-system, sans-serif;
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: #7a6e64;
+                margin: 1.6rem 0 0.4rem;
+            }
+
+            .project-description h3:first-of-type {
+                margin-top: 0;
+            }
+
+            .feature-block h4 {
+                font-family: 'Space Grotesk', -apple-system, sans-serif;
+                font-weight: 600;
+                font-size: 1rem;
+                color: #7a6e64;
+                margin: 1.2rem 0 0.2rem;
+            }
+
+            .feature-block p {
+                font-family: 'Inter', sans-serif;
+                font-size: 1rem;
+                color: var(--text-secondary);
+                line-height: 1.8;
+                margin-bottom: 0.8rem;
+            }
+
+            .project-description p {
+                font-family: 'Inter', sans-serif;
+                font-size: 1rem;
+                color: var(--text-secondary);
+                line-height: 1.8;
+                margin-bottom: 0.8rem;
+            }
+
+            .project-description ul {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 1.2rem;
+            }
+
+            .project-description ul li {
+                position: relative;
+                padding-left: 20px;
+                margin-bottom: 0.4rem;
+                font-size: 0.95rem;
+                color: var(--text-secondary);
+                line-height: 1.6;
+            }
+
+            .project-description ul li::before {
+                content: '◆';
+                position: absolute;
+                left: 0;
+                color: var(--text-muted);
+                font-weight: 300;
+                font-size: 0.7rem;
+                top: 2px;
+            }
+
+            .project-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 0.8rem;
+            }
+
+            .project-tags .skill-tag {
+                font-size: 0.75rem;
+                font-weight: 500;
+                padding: 6px 16px;
+                border-radius: 100px;
+                background: rgba(0, 0, 0, 0.03);
+                border: 1px solid var(--border);
+                color: var(--text-secondary);
+            }
+
+            @media (max-width: 480px) {
+                .project-image {
+                    max-width: 100%;
+                }
+
+                .project-description h3 {
+                    font-size: 1rem;
+                }
+
+                .project-description p {
+                    font-size: 0.9rem;
+                }
+
+                .feature-block h4 {
+                    font-size: 0.95rem;
+                }
+
+                .feature-block p {
+                    font-size: 0.9rem;
+                }
+
+                .project-description ul li {
+                    font-size: 0.85rem;
+                    padding-left: 16px;
+                }
+
+                .project-tags .skill-tag {
+                    font-size: 0.7rem;
+                    padding: 4px 12px;
+                }
+
+                .project-caption {
+                    font-size: 0.75rem;
+                }
+            }
+        </style>
+
+    </body>
+
+</html>
