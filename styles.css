@@ -9,15 +9,10 @@
 
 :root {
     --bg: #f5f0ea;
-    /* warm cream – slightly warmer than before */
     --text-primary: #6b6058;
-    /* soft warm brown – replaces dark gray */
     --text-secondary: #8a7e74;
-    /* muted warm brown */
     --text-muted: #b5a89c;
-    /* soft beige – very gentle */
     --border: #e0d6cc;
-    /* warm, soft border */
     --white: #ffffff;
     --max-width: 720px;
 }
@@ -54,7 +49,6 @@ h1 {
     letter-spacing: -0.02em;
     line-height: 1.1;
     color: #8a7e74;
-    /* warm, muted brown */
 }
 
 h2 {
@@ -71,7 +65,6 @@ h3 {
     font-weight: 600;
     font-size: 1.15rem;
     color: #9a8e84;
-    /* slightly lighter than h1/h2 */
 }
 
 p,
@@ -120,7 +113,6 @@ a {
 
 a:hover {
     opacity: 0.5;
-    /* softer hover */
 }
 
 /* ===== HEADER ===== */
@@ -231,6 +223,7 @@ section:last-of-type {
     padding-left: 20px;
     margin-bottom: 0.2rem;
     font-size: 0.95rem;
+    color: var(--text-secondary);
 }
 
 .exp-item ul li::before {
@@ -256,7 +249,7 @@ section:last-of-type {
     font-family: 'Space Grotesk', -apple-system, sans-serif;
     font-weight: 600;
     font-size: 1rem;
-    color: var(--text-primary);
+    color: var(--text-secondary);
 }
 
 .edu-meta {
@@ -283,7 +276,7 @@ section:last-of-type {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 0.95rem;
-    color: var(--text-primary);
+    color: var(--text-secondary);
 }
 
 .cert-issuer {
@@ -305,6 +298,7 @@ section:last-of-type {
 .project-item p {
     font-size: 0.95rem;
     margin: 2px 0 4px;
+    color: var(--text-secondary);
 }
 
 .project-item a {
@@ -321,6 +315,7 @@ section:last-of-type {
 .contact-intro {
     font-size: 1rem;
     margin-bottom: 1.2rem;
+    color: var(--text-secondary);
 }
 
 .contact-links {
@@ -335,11 +330,13 @@ section:last-of-type {
     gap: 8px;
     font-weight: 500;
     font-size: 0.95rem;
-    color: var(--text-primary);
+    color: var(--text-secondary);
+    transition: color 0.2s, opacity 0.2s;
 }
 
 .contact-links a:hover {
-    opacity: 0.5;
+    color: var(--text-primary);
+    opacity: 1;
 }
 
 section.contact {
