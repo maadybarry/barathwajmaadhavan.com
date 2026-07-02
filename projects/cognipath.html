@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CogniPath · Barathwaj Maadhavan</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+
+    <body>
+
+        <!-- ===== MAIN CONTAINER ===== -->
+        <main class="container">
+
+            <!-- ===== HEADER ===== -->
+            <header class="header" style="margin-bottom: 2rem;">
+                <h1>Barathwaj Maadhavan</h1>
+                <p class="tagline">Builder &amp; Watch Collector</p>
+            </header>
+
+            <!-- ===== BACK BUTTON ===== -->
+            <a href="../index.html#projects" class="back-button">
+                <i class="fas fa-arrow-left"></i> All Projects
+            </a>
+
+            <!-- ===== PROJECT CONTENT ===== -->
+            <section class="project-detail">
+                <h2>CogniPath</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.2rem;">AI-driven adaptive learning platform for
+                    modern knowledge transfer.</p>
+
+                <!-- ===== IMAGE 1: Assessment Page ===== -->
+                <figure class="project-figure">
+                    <img src="../assets/images/kt_ques.png"
+                        alt="CogniPath automated assessment page determining learner proficiency level"
+                        class="project-image" />
+                    <figcaption class="project-caption">Automated assessment – gauging learner proficiency to
+                        personalise the learning path.</figcaption>
+                </figure>
+
+                <!-- ===== OVERVIEW ===== -->
+                <div class="project-description">
+
+                    <h3>Overview</h3>
+                    <p>
+                        To modernize the knowledge transfer (KT) process and eliminate the inefficiencies of long-form,
+                        monolithic training videos, I architected and developed <strong>CogniPath</strong> – a dynamic,
+                        AI-driven learning platform that decomposes multi-hour onboarding sessions into bite-sized,
+                        digestible modules.
+                    </p>
+                    <p>
+                        The platform automates the extraction of knowledge and the creation of a responsive, web-based
+                        training portal, significantly reducing the cognitive load of new hires and allowing them to
+                        master complex internal processes through efficient, modular, and adaptive learning.
+                    </p>
+
+                    <h3>The Challenge</h3>
+                    <p>
+                        Traditional onboarding relied on lengthy, monolithic training videos that overwhelmed new hires.
+                        Cognitive overload was high, retention was low, and there was no way to personalise the learning
+                        experience based on existing knowledge levels.
+                    </p>
+
+                    <h3>How It Works</h3>
+                    <p>
+                        The pipeline begins by ingesting training videos and their associated transcripts, which are
+                        then processed by an <strong>LLM</strong> to identify core concepts, categorise them into a
+                        hierarchical structure of topics and subtopics, and determine optimal timestamps for
+                        segmentation. The system then automatically clips the original media into focused,
+                        topic-specific videos and synthesises descriptive summaries for each.
+                    </p>
+                    <p>
+                        To ensure rapid deployment, the entire platform – including the site structure, content
+                        descriptions, and HTML scaffolding – is generated programmatically. The system utilises a
+                        templating engine where an LLM injects the processed content into a standardised UI layout.
+                    </p>
+
+                    <!-- ===== KEY FEATURES ===== -->
+                    <h3>Key Features</h3>
+
+                    <!-- ===== FEATURE 1: Assessment ===== -->
+                    <div class="feature-block">
+                        <h4>Personalised Learning Assessment</h4>
+                        <p>
+                            Upon entry, users undergo an automated assessment to gauge their existing knowledge level –
+                            <strong>beginner, intermediate, or expert</strong> – which the system uses to dynamically
+                            tailor the learning path.
+                        </p>
+                    </div>
+
+                    <!-- ===== IMAGE 2: KT Learning Page ===== -->
+                    <figure class="project-figure">
+                        <img src="../assets/images/kt_plan_mindmap.png"
+                            alt="CogniPath learning page with videos and mind-map navigation" class="project-image" />
+                        <figcaption class="project-caption">KT Learning Page – video modules with mind-map navigation
+                            and structured curriculum.</figcaption>
+                    </figure>
+
+                    <!-- ===== FEATURE 2: Learning Interface ===== -->
+                    <div class="feature-block">
+                        <h4>Interactive Learning Interface</h4>
+                        <p>
+                            The front-end interface, which I designed to mirror an intuitive, Udemy-style structure,
+                            features a <strong>mind-map navigation panel</strong> on the side that allows for seamless
+                            browsing of the curriculum.
+                        </p>
+                    </div>
+
+                    <!-- ===== FEATURE 3: Automated Generation ===== -->
+                    <div class="feature-block">
+                        <h4>Programmatic Content Generation</h4>
+                        <p>
+                            The entire platform – including site structure, content descriptions, and HTML scaffolding –
+                            is generated programmatically. A templating engine uses an LLM to inject processed content
+                            into a standardised UI layout, enabling rapid deployment and consistency.
+                        </p>
+                    </div>
+
+                    <h3>Results &amp; Impact</h3>
+                    <ul>
+                        <li><strong>Reduced cognitive load</strong> – decomposed multi-hour sessions into bite-sized
+                            modules.</li>
+                        <li><strong>Personalised learning</strong> – adaptive paths based on assessment results.</li>
+                        <li><strong>Rapid deployment</strong> – programmatic generation of the entire platform.</li>
+                        <li><strong>Improved retention</strong> – modular, focused content improves knowledge retention.
+                        </li>
+                    </ul>
+
+                    <h3>Key Learnings</h3>
+                    <p>
+                        Building CogniPath reinforced the value of automation in content creation. By programmatically
+                        generating the platform structure, we eliminated manual content curation and ensured consistency
+                        across modules. I also learned that personalisation is key – learners engage more deeply when
+                        content adapts to their existing knowledge level. The mind-map navigation proved to be a
+                        powerful tool for visualising the curriculum and reducing cognitive friction.
+                    </p>
+
+                </div>
+
+                <!-- ===== TECH STACK ===== -->
+                <div class="project-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">LangGraph</span>
+                    <span class="skill-tag">LLM</span>
+                    <span class="skill-tag">FFMPEG</span>
+                    <span class="skill-tag">Templating Engine</span>
+                    <span class="skill-tag">Audio LLM Engine</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                </div>
+            </section>
+
+            <!-- ===== FOOTER ===== -->
+            <footer class="footer" style="margin-top: 3rem;">
+                <p>&copy; 2026 Barathwaj Maadhavan</p>
+            </footer>
+
+        </main>
+
+        <!-- ===== PAGE-SPECIFIC STYLES ===== -->
+        <style>
+            .back-button {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.9rem;
+                color: var(--text-muted);
+                text-decoration: none;
+                margin-bottom: 1.2rem;
+                transition: color 0.2s;
+            }
+
+            .back-button:hover {
+                color: var(--text-primary);
+            }
+
+            .project-figure {
+                margin: 1.6rem 0;
+            }
+
+            .project-image {
+                width: 100%;
+                max-width: 700px;
+                border-radius: 12px;
+                border: 1px solid var(--border);
+                display: block;
+            }
+
+            .project-caption {
+                font-family: 'Inter', sans-serif;
+                font-size: 0.85rem;
+                color: var(--text-muted);
+                margin-top: 0.4rem;
+                font-style: italic;
+            }
+
+            .project-description h3 {
+                font-family: 'Space Grotesk', -apple-system, sans-serif;
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: #7a6e64;
+                margin: 1.6rem 0 0.4rem;
+            }
+
+            .project-description h3:first-of-type {
+                margin-top: 0;
+            }
+
+            .feature-block h4 {
+                font-family: 'Space Grotesk', -apple-system, sans-serif;
+                font-weight: 600;
+                font-size: 1rem;
+                color: #7a6e64;
+                margin: 1.2rem 0 0.2rem;
+            }
+
+            .feature-block p {
+                font-family: 'Inter', sans-serif;
+                font-size: 1rem;
+                color: var(--text-secondary);
+                line-height: 1.8;
+                margin-bottom: 0.8rem;
+            }
+
+            .project-description p {
+                font-family: 'Inter', sans-serif;
+                font-size: 1rem;
+                color: var(--text-secondary);
+                line-height: 1.8;
+                margin-bottom: 0.8rem;
+            }
+
+            .project-description ul {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 1.2rem;
+            }
+
+            .project-description ul li {
+                position: relative;
+                padding-left: 20px;
+                margin-bottom: 0.4rem;
+                font-size: 0.95rem;
+                color: var(--text-secondary);
+                line-height: 1.6;
+            }
+
+            .project-description ul li::before {
+                content: '◆';
+                position: absolute;
+                left: 0;
+                color: var(--text-muted);
+                font-weight: 300;
+                font-size: 0.7rem;
+                top: 2px;
+            }
+
+            .project-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 0.8rem;
+            }
+
+            .project-tags .skill-tag {
+                font-size: 0.75rem;
+                font-weight: 500;
+                padding: 6px 16px;
+                border-radius: 100px;
+                background: rgba(0, 0, 0, 0.03);
+                border: 1px solid var(--border);
+                color: var(--text-secondary);
+            }
+
+            @media (max-width: 480px) {
+                .project-image {
+                    max-width: 100%;
+                }
+
+                .project-description h3 {
+                    font-size: 1rem;
+                }
+
+                .project-description p {
+                    font-size: 0.9rem;
+                }
+
+                .feature-block h4 {
+                    font-size: 0.95rem;
+                }
+
+                .feature-block p {
+                    font-size: 0.9rem;
+                }
+
+                .project-description ul li {
+                    font-size: 0.85rem;
+                    padding-left: 16px;
+                }
+
+                .project-tags .skill-tag {
+                    font-size: 0.7rem;
+                    padding: 4px 12px;
+                }
+
+                .project-caption {
+                    font-size: 0.75rem;
+                }
+            }
+        </style>
+
+    </body>
+
+</html>
