@@ -128,7 +128,7 @@ a:hover {
 }
 
 .social-links a {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--text-muted);
     transition: color 0.3s, transform 0.2s;
     display: inline-flex;
@@ -400,7 +400,7 @@ section.contact {
     }
 
     .social-links a {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         width: 28px;
         height: 28px;
     }
@@ -496,9 +496,9 @@ section.contact {
     }
 
     .social-links a {
-        font-size: 1rem;
-        width: 26px;
-        height: 26px;
+        font-size: 1.4rem;
+        width: 24px;
+        height: 24px;
     }
 
     .watch-link {
@@ -507,7 +507,7 @@ section.contact {
     }
 
     .watch-link {
-        font-size: 0.95rem;
+        font-size: 1.0rem;
     }
 
     section {
