@@ -8,11 +8,16 @@
 }
 
 :root {
-    --bg: #faf8f5;
-    --text-primary: #2d2a28;
-    --text-secondary: #5a5a5a;
-    --text-muted: #8a8a8a;
-    --border: #e0ddd8;
+    --bg: #f5f0ea;
+    /* warm cream – slightly warmer than before */
+    --text-primary: #6b6058;
+    /* soft warm brown – replaces dark gray */
+    --text-secondary: #8a7e74;
+    /* muted warm brown */
+    --text-muted: #b5a89c;
+    /* soft beige – very gentle */
+    --border: #e0d6cc;
+    /* warm, soft border */
     --white: #ffffff;
     --max-width: 720px;
 }
@@ -45,26 +50,28 @@ body {
 h1 {
     font-family: 'Space Grotesk', -apple-system, sans-serif;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 1.6rem;
     letter-spacing: -0.02em;
     line-height: 1.1;
-    color: var(--text-primary);
+    color: #8a7e74;
+    /* warm, muted brown */
 }
 
 h2 {
     font-family: 'Space Grotesk', -apple-system, sans-serif;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     letter-spacing: -0.01em;
     margin-bottom: 1rem;
-    color: var(--text-primary);
+    color: #8a7e74;
 }
 
 h3 {
     font-family: 'Space Grotesk', -apple-system, sans-serif;
     font-weight: 600;
-    font-size: 1rem;
-    color: var(--text-primary);
+    font-size: 1.15rem;
+    color: #9a8e84;
+    /* slightly lighter than h1/h2 */
 }
 
 p,
@@ -112,7 +119,8 @@ a {
 }
 
 a:hover {
-    opacity: 0.6;
+    opacity: 0.5;
+    /* softer hover */
 }
 
 /* ===== HEADER ===== */
@@ -130,7 +138,7 @@ a:hover {
 .social-links a {
     font-size: 1.2rem;
     color: var(--text-muted);
-    transition: color 0.2s, transform 0.2s;
+    transition: color 0.3s, transform 0.2s;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -302,6 +310,11 @@ section:last-of-type {
 .project-item a {
     font-weight: 500;
     font-size: 0.9rem;
+    color: var(--text-primary);
+}
+
+.project-item a:hover {
+    opacity: 0.5;
 }
 
 /* ===== CONTACT ===== */
@@ -322,6 +335,11 @@ section:last-of-type {
     gap: 8px;
     font-weight: 500;
     font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.contact-links a:hover {
+    opacity: 0.5;
 }
 
 section.contact {
