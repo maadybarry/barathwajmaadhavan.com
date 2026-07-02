@@ -464,6 +464,10 @@ section.contact {
         padding: 20px 16px;
     }
 
+    .header {
+        padding-top: 2.5rem;
+    }
+
     h1 {
         font-size: 1.5rem;
         /* ratio 1.67 vs body (0.9) – close to desktop 1.6 */
