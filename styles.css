@@ -149,8 +149,8 @@ a:hover {
 /* ===== WATCH SVG ===== */
 .watch-link svg {
     display: block;
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     fill: currentColor;
 }
 
@@ -373,8 +373,8 @@ section.contact {
     }
 
     .watch-link svg {
-        width: 22px;
-        height: 22px;
+        width: 24px;
+        height: 24px;
     }
 
     section {
@@ -465,8 +465,8 @@ section.contact {
     }
 
     .watch-link svg {
-        width: 20px;
-        height: 20px;
+        width: 22px;
+        height: 22px;
     }
 
     section {
