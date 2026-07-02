@@ -22,10 +22,10 @@
 
     <body>
 
-        <!-- ===== MAIN CONTAINER (same as home) ===== -->
+        <!-- ===== MAIN CONTAINER ===== -->
         <main class="container">
 
-            <!-- ===== HEADER (same as home, but without bio & status) ===== -->
+            <!-- ===== HEADER ===== -->
             <header class="header" style="margin-bottom: 2rem;">
                 <h1>Barathwaj Maadhavan</h1>
                 <p class="tagline">Builder &amp; Watch Collector</p>
@@ -36,40 +36,39 @@
                 <i class="fas fa-arrow-left"></i> Back to home
             </a>
 
-            <!-- ===== WATCH COLLECTION ===== -->
-            <section class="watch-collection">
-                <h2>My Watch Collection</h2>
-                <p style="color: var(--text-muted); margin-bottom: 2rem;">A small but growing collection – each one with
-                    a story.</p>
+            <!-- ===== HERO IMAGE ===== -->
+            <div class="watch-hero">
+                <img src="assets/images/watch_collection.jpg" alt="Watch Collection" class="watch-hero-image" />
+            </div>
 
-                <!-- Watch 1 -->
-                <div class="watch-item">
-                    <img src="assets/images/watch1.jpg" alt="Watch 1" class="watch-image" />
-                    <div class="watch-description">
-                        <strong>Rolex Submariner (No-Date)</strong> – My first luxury watch, a daily driver.
-                        Understated, robust, and timeless.
-                    </div>
-                </div>
+            <!-- ===== WATCH LIST ===== -->
+            <section class="watch-list">
+                <h2>My Collection</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.6rem;">A small but growing collection – each one
+                    with a story.</p>
 
-                <!-- Watch 2 -->
-                <div class="watch-item">
-                    <img src="assets/images/watch2.jpg" alt="Watch 2" class="watch-image" />
-                    <div class="watch-description">
-                        <strong>Omega Speedmaster Professional</strong> – The Moonwatch. A testament to human
-                        achievement – and it looks great on a strap.
-                    </div>
-                </div>
-
-                <!-- Watch 3 -->
-                <div class="watch-item">
-                    <img src="assets/images/watch3.jpg" alt="Watch 3" class="watch-image" />
-                    <div class="watch-description">
-                        <strong>Grand Seiko SBGA211 (Snowflake)</strong> – The dial is a work of art, and the Spring
-                        Drive is mesmerising. A true conversation starter.
-                    </div>
-                </div>
-
-                <!-- Add more watches as needed -->
+                <ul class="watch-pointers">
+                    <li>
+                        <span class="watch-name">Rolex Submariner (No-Date)</span>
+                        <span class="watch-desc">My first luxury watch – understated, robust, and timeless. A daily
+                            companion.</span>
+                    </li>
+                    <li>
+                        <span class="watch-name">Omega Speedmaster Professional</span>
+                        <span class="watch-desc">The Moonwatch. A testament to human achievement – and it looks great on
+                            a strap.</span>
+                    </li>
+                    <li>
+                        <span class="watch-name">Grand Seiko SBGA211 (Snowflake)</span>
+                        <span class="watch-desc">The dial is a work of art, and the Spring Drive is mesmerising. A true
+                            conversation starter.</span>
+                    </li>
+                    <li>
+                        <span class="watch-name">Tudor Black Bay Fifty‑Eight</span>
+                        <span class="watch-desc">A modern classic – perfect proportions, vintage charm, and a dive watch
+                            that feels at home anywhere.</span>
+                    </li>
+                </ul>
             </section>
 
             <!-- ===== FOOTER ===== -->
@@ -79,26 +78,8 @@
 
         </main>
 
-        <!-- Custom page-specific styles (keep them light and only for watch items) -->
+        <!-- ===== PAGE-SPECIFIC STYLES ===== -->
         <style>
-            .watch-item {
-                margin-bottom: 2.4rem;
-            }
-
-            .watch-image {
-                width: 100%;
-                max-width: 600px;
-                border-radius: 12px;
-                border: 1px solid var(--border);
-                margin-bottom: 0.8rem;
-            }
-
-            .watch-description {
-                font-size: 1rem;
-                color: var(--text-secondary);
-                line-height: 1.7;
-            }
-
             .back-button {
                 display: inline-flex;
                 align-items: center;
@@ -107,12 +88,82 @@
                 font-size: 0.9rem;
                 color: var(--text-muted);
                 text-decoration: none;
-                margin-bottom: 1.2rem;
+                margin-bottom: 1.6rem;
                 transition: color 0.2s;
             }
 
             .back-button:hover {
                 color: var(--text-primary);
+            }
+
+            .watch-hero {
+                margin-bottom: 2rem;
+            }
+
+            .watch-hero-image {
+                width: 100%;
+                max-width: 600px;
+                border-radius: 12px;
+                border: 1px solid var(--border);
+                display: block;
+            }
+
+            .watch-pointers {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .watch-pointers li {
+                position: relative;
+                padding-left: 20px;
+                margin-bottom: 1.2rem;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .watch-pointers li::before {
+                content: '◆';
+                position: absolute;
+                left: 0;
+                top: 2px;
+                color: var(--text-muted);
+                font-size: 0.7rem;
+            }
+
+            .watch-name {
+                font-family: 'Space Grotesk', sans-serif;
+                font-weight: 600;
+                font-size: 1rem;
+                color: #8a7e74;
+                /* matches h3 color from homepage */
+            }
+
+            .watch-desc {
+                font-family: 'Inter', sans-serif;
+                font-size: 0.95rem;
+                color: var(--text-secondary);
+                /* matches list item color */
+                margin-top: 2px;
+            }
+
+            @media (max-width: 480px) {
+                .watch-hero-image {
+                    max-width: 100%;
+                }
+
+                .watch-name {
+                    font-size: 0.95rem;
+                }
+
+                .watch-desc {
+                    font-size: 0.85rem;
+                }
+
+                .watch-pointers li {
+                    padding-left: 16px;
+                    margin-bottom: 1rem;
+                }
             }
         </style>
 
