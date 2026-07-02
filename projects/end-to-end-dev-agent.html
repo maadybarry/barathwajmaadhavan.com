@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>End to End Development Automation Agent · Barathwaj Maadhavan</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+
+    <body>
+
+        <!-- ===== MAIN CONTAINER ===== -->
+        <main class="container">
+
+            <!-- ===== HEADER ===== -->
+            <header class="header" style="margin-bottom: 2rem;">
+                <h1>Barathwaj Maadhavan</h1>
+                <p class="tagline">Builder &amp; Watch Collector</p>
+            </header>
+
+            <!-- ===== BACK BUTTON ===== -->
+            <a href="../index.html#projects" class="back-button">
+                <i class="fas fa-arrow-left"></i> All Projects
+            </a>
+
+            <!-- ===== PROJECT CONTENT ===== -->
+            <section class="project-detail">
+                <h2>End to End Development Automation Agent</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.2rem;">End-to-end automated development pipeline
+                    for ETL modifications.</p>
+
+                <!-- ===== IMAGE: n8n Pipeline ===== -->
+                <figure class="project-figure">
+                    <img src="../assets/images/code_auto_n8n.png"
+                        alt="n8n orchestration pipeline connecting RMT, AI agents, and validation layers"
+                        class="project-image" />
+                    <figcaption class="project-caption">n8n orchestration pipeline connecting RMT, AI agents, and
+                        validation layers.</figcaption>
+                </figure>
+
+                <!-- ===== OVERVIEW ===== -->
+                <div class="project-description">
+
+                    <h3>Overview</h3>
+                    <p>
+                        To address the inefficiency of long turnaround times – often taking two to three days for minor
+                        ETL modifications – we architected and deployed an end-to-end automated development pipeline
+                        that accelerates the lifecycle from requirement gathering to final validation.
+                    </p>
+
+                    <h3>The Challenge</h3>
+                    <p>
+                        Engineering teams were spending significant time on low-complexity ETL changes. Manual effort
+                        was consuming ~40% of engineering time, and delivery cycles averaged 2–3 days for simple
+                        modifications.
+                    </p>
+
+                    <h3>How It Works</h3>
+                    <p>
+                        At the core of this system, we utilized <strong>n8n</strong> for orchestration, hosted on a
+                        cloud-based VPC, while the AI agents responsible for code intelligence and processing reside
+                        within a separate, secure internal network. To facilitate communication between these isolated
+                        environments, we implemented an asynchronous messaging pattern using an <strong>S3
+                            bucket</strong> as a central exchange, leveraging JSON files to pass task payloads and state
+                        data between the two networks.
+                    </p>
+
+                    <p>The workflow proceeds as follows:</p>
+
+                    <ol class="project-steps">
+                        <li>
+                            <strong>Requirement Extraction</strong> – The n8n-based agent extracts requirements and
+                            ticket details from our RMT platform.
+                        </li>
+                        <li>
+                            <strong>Code Intelligence</strong> – The End to End Development Automation agent identifies
+                            and implements the necessary logic or schema modifications.
+                        </li>
+                        <li>
+                            <strong>Payload Generation</strong> – A comprehensive payload containing the file path,
+                            modified line numbers, and requirement context is generated.
+                        </li>
+                        <li>
+                            <strong>Validation Layer</strong> – This triggers a multi-agent, sequential workflow using
+                            <strong>LangGraph</strong>, which programmatically identifies affected SQL jobs and their
+                            source-to-target dependencies.
+                        </li>
+                        <li>
+                            <strong>Synthetic Data &amp; Testing</strong> – The system extracts representative schema
+                            data, generates synthetic datasets to mirror production environments, and executes the jobs.
+                        </li>
+                        <li>
+                            <strong>Verification</strong> – Rigorous checks are performed for column integrity and data
+                            flow compliance.
+                        </li>
+                        <li>
+                            <strong>Reporting &amp; Approval</strong> – Results are synthesized into a detailed report,
+                            pushed back to n8n, which dispatches a confirmation email for human review and approval.
+                        </li>
+                    </ol>
+
+                    <!-- ===== IMAGE: Efficiency Graph ===== -->
+                    <figure class="project-figure">
+                        <img src="../assets/images/code_auto_graph.png"
+                            alt="Efficiency comparison: human vs AI automation showing over 90% reduction and 3x faster delivery"
+                            class="project-image" />
+                        <figcaption class="project-caption">Efficiency improvements showing over 90% reduction in manual
+                            effort and 3x faster delivery cycles.</figcaption>
+                    </figure>
+
+                    <h3>Results &amp; Impact</h3>
+                    <ul>
+                        <li><strong>over 90% reduction</strong> in manual effort on low-complexity tickets.</li>
+                        <li><strong>3x faster</strong> delivery cycles – from days to hours.</li>
+                        <li><strong>20+ tickets</strong> handled autonomously per month.</li>
+                        <li><strong>75% accuracy</strong> on first-pass code generation.</li>
+                    </ul>
+
+                    <h3>Key Learnings</h3>
+                    <p>
+                        Building this agent reinforced the importance of robust validation pipelines. Without reliable
+                        testing, autonomous code generation introduces risk. I also learned that human oversight remains
+                        critical – the agent works best as a co-pilot, not a replacement. The asynchronous S3-based
+                        communication pattern proved essential for maintaining security between isolated networks.
+                    </p>
+
+                </div>
+
+                <!-- ===== TECH STACK ===== -->
+                <div class="project-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">LangChain</span>
+                    <span class="skill-tag">LangGraph</span>
+                    <span class="skill-tag">n8n</span>
+                    <span class="skill-tag">AWS S3</span>
+                    <span class="skill-tag">RAG</span>
+                    <span class="skill-tag">ETL</span>
+                </div>
+            </section>
+
+            <!-- ===== FOOTER ===== -->
+            <footer class="footer" style="margin-top: 3rem;">
+                <p>&copy; 2026 Barathwaj Maadhavan</p>
+            </footer>
+
+        </main>
+
+        <!-- ===== PAGE-SPECIFIC STYLES ===== -->
+        <style>
+            .back-button {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.9rem;
+                color: var(--text-muted);
+                text-decoration: none;
+                margin-bottom: 1.2rem;
+                transition: color 0.2s;
+            }
+
+            .back-button:hover {
+                color: var(--text-primary);
+            }
+
+            .project-figure {
+                margin: 1.6rem 0;
+            }
+
+            .project-image {
+                width: 100%;
+                max-width: 700px;
+                border-radius: 12px;
+                border: 1px solid var(--border);
+                display: block;
+            }
+
+            .project-caption {
+                font-family: 'Inter', sans-serif;
+                font-size: 0.85rem;
+                color: var(--text-muted);
+                margin-top: 0.4rem;
+                font-style: italic;
+            }
+
+            .project-description h3 {
+                font-family: 'Space Grotesk', -apple-system, sans-serif;
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: #7a6e64;
+                margin: 1.6rem 0 0.4rem;
+            }
+
+            .project-description h3:first-of-type {
+                margin-top: 0;
+            }
+
+            .project-description p {
+                font-family: 'Inter', sans-serif;
+                font-size: 1rem;
+                color: var(--text-secondary);
+                line-height: 1.8;
+                margin-bottom: 0.8rem;
+            }
+
+            .project-description ul {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 1.2rem;
+            }
+
+            .project-description ul li {
+                position: relative;
+                padding-left: 20px;
+                margin-bottom: 0.4rem;
+                font-size: 0.95rem;
+                color: var(--text-secondary);
+                line-height: 1.6;
+            }
+
+            .project-description ul li::before {
+                content: '◆';
+                position: absolute;
+                left: 0;
+                color: var(--text-muted);
+                font-weight: 300;
+                font-size: 0.7rem;
+                top: 2px;
+            }
+
+            .project-steps {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 1.2rem;
+                counter-reset: step;
+            }
+
+            .project-steps li {
+                position: relative;
+                padding-left: 32px;
+                margin-bottom: 0.6rem;
+                font-size: 0.95rem;
+                color: var(--text-secondary);
+                line-height: 1.6;
+                counter-increment: step;
+            }
+
+            .project-steps li::before {
+                content: counter(step);
+                position: absolute;
+                left: 0;
+                top: 0;
+                font-family: 'Space Grotesk', sans-serif;
+                font-weight: 600;
+                font-size: 0.8rem;
+                color: var(--text-muted);
+                background: var(--border);
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .project-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 0.8rem;
+            }
+
+            .project-tags .skill-tag {
+                font-size: 0.75rem;
+                font-weight: 500;
+                padding: 6px 16px;
+                border-radius: 100px;
+                background: rgba(0, 0, 0, 0.03);
+                border: 1px solid var(--border);
+                color: var(--text-secondary);
+            }
+
+            @media (max-width: 480px) {
+                .project-image {
+                    max-width: 100%;
+                }
+
+                .project-description h3 {
+                    font-size: 1rem;
+                }
+
+                .project-description p {
+                    font-size: 0.9rem;
+                }
+
+                .project-description ul li {
+                    font-size: 0.85rem;
+                    padding-left: 16px;
+                }
+
+                .project-steps li {
+                    font-size: 0.85rem;
+                    padding-left: 28px;
+                }
+
+                .project-steps li::before {
+                    width: 18px;
+                    height: 18px;
+                    font-size: 0.7rem;
+                }
+
+                .project-tags .skill-tag {
+                    font-size: 0.7rem;
+                    padding: 4px 12px;
+                }
+
+                .project-caption {
+                    font-size: 0.75rem;
+                }
+            }
+        </style>
+
+    </body>
+
+</html>
