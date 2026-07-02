@@ -121,21 +121,24 @@ a:hover {
     padding-bottom: 1.2rem;
 }
 
+/* ===== SOCIAL LINKS ===== */
 .social-links {
     display: flex;
     gap: 18px;
     margin-top: 1.2rem;
+    align-items: center;
 }
 
 .social-links a {
-    font-size: 1.4rem;
-    color: var(--text-muted);
-    transition: color 0.3s, transform 0.2s;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 34px;
+    height: 34px;
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    transition: color 0.3s, transform 0.2s;
+    text-decoration: none;
 }
 
 .social-links a:hover {
@@ -143,46 +146,12 @@ a:hover {
     opacity: 1;
 }
 
-/* ===== WATCH EMOJI FIX ===== */
-.watch-link {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    text-decoration: none;
-}
-
-.watch-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    line-height: 1;
-    width: 100%;
-    height: 100%;
-}
-
-@media (max-width: 768px) {
-    .watch-link {
-        width: 28px !important;
-        height: 28px !important;
-    }
-
-    .watch-link {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .watch-link {
-        width: 26px !important;
-        height: 26px !important;
-    }
-
-    .watch-link {
-        font-size: 1rem;
-    }
+/* ===== WATCH SVG ===== */
+.watch-link svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
 }
 
 /* ===== SECTIONS ===== */
@@ -376,12 +345,10 @@ section.contact {
 
     h2 {
         font-size: 1.4rem;
-        /* ratio 1.47 vs body (0.95) – close to desktop 1.5 */
     }
 
     h3 {
         font-size: 1.1rem;
-        /* ratio 1.16 – matches desktop 1.15 */
     }
 
     p,
@@ -400,15 +367,14 @@ section.contact {
     }
 
     .social-links a {
-        font-size: 1.4rem;
-        width: 28px;
-        height: 28px;
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
     }
 
-    .watch-link {
-        font-size: 1.1rem;
-        width: 28px !important;
-        height: 28px !important;
+    .watch-link svg {
+        width: 22px;
+        height: 22px;
     }
 
     section {
@@ -467,17 +433,14 @@ section.contact {
 
     h1 {
         font-size: 1.5rem;
-        /* ratio 1.67 vs body (0.9) – close to desktop 1.6 */
     }
 
     h2 {
         font-size: 1.35rem;
-        /* ratio 1.5 – matches desktop exactly */
     }
 
     h3 {
         font-size: 1.05rem;
-        /* ratio 1.17 – matches desktop 1.15 closely */
     }
 
     p,
@@ -496,18 +459,14 @@ section.contact {
     }
 
     .social-links a {
-        font-size: 1.4rem;
-        width: 24px;
-        height: 24px;
+        width: 28px;
+        height: 28px;
+        font-size: 1.1rem;
     }
 
-    .watch-link {
-        width: 24px !important;
-        height: 24px !important;
-    }
-
-    .watch-link {
-        font-size: 1.0rem;
+    .watch-link svg {
+        width: 20px;
+        height: 20px;
     }
 
     section {
