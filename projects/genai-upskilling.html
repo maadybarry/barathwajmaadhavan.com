@@ -33,7 +33,7 @@
             </header>
 
             <!-- ===== BACK BUTTON ===== -->
-            <a href="../index.html#projects" class="back-button">
+            <a href="../index.html#leadership" class="back-button">
                 <i class="fas fa-arrow-left"></i> All Projects
             </a>
 
@@ -52,6 +52,15 @@
                         foundational and advanced artificial intelligence technologies. I structured the program into
                         two distinct phases to balance conceptual depth with technical competency.
                     </p>
+
+                    <!-- ===== CERTIFICATE IMAGE ===== -->
+                    <figure class="project-figure">
+                        <img src="../assets/images/cert_genai.png" alt="GenAI Training Certificate"
+                            class="project-image" />
+                        <figcaption class="project-caption">Certificate for serving as an SME in the GenAI Enterprise
+                            Upskilling program.
+                        </figcaption>
+                    </figure>
 
                     <h3>The Challenge</h3>
                     <p>
@@ -160,6 +169,26 @@
 
             .back-button:hover {
                 color: var(--text-primary);
+            }
+
+            .project-figure {
+                margin: 1.6rem 0;
+            }
+
+            .project-image {
+                width: 100%;
+                max-width: 600px;
+                border-radius: 12px;
+                border: 1px solid var(--border);
+                display: block;
+            }
+
+            .project-caption {
+                font-family: 'Inter', sans-serif;
+                font-size: 0.85rem;
+                color: var(--text-muted);
+                margin-top: 0.4rem;
+                font-style: italic;
             }
 
             .project-description h3 {
