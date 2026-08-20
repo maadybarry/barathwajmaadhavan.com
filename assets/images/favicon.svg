@@ -3,7 +3,7 @@
      width="48"
      height="48">
   <!-- Background (matches your site's background) -->
-  <rect width="48" height="48" rx="8" fill="#EEEEEE" />
+  <rect width="48" height="48" rx="8" fill="#FFFFFF" />
   
   <!-- Helmet Shell -->
   <path fill="none" stroke="#666666" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M40.671 28.43c.29-5.077-.171-22.965-15.908-20.236c-6.25 1.084-11.796 4.844-11.581 11.581c.13 4.047 1.197 7.902 3.101 11.806m24.388-3.151c-3.18 5.002-8.538 6.395-14.007 7.604c-.748-1.18-4.886-5.15-10.38-4.452"/>
