@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Audit Reporting Automation &amp; Cost Optimization · Barathwaj Maadhavan</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+
+    <body>
+
+        <!-- ===== MAIN CONTAINER ===== -->
+        <main class="container">
+
+            <!-- ===== HEADER ===== -->
+            <header class="header" style="margin-bottom: 2rem;">
+                <h1>Barathwaj Maadhavan</h1>
+                <p class="tagline">AI Engineer · Forward Deployed Engineer</p>
+            </header>
+
+            <!-- ===== BACK BUTTON ===== -->
+            <a href="../index.html#projects" class="back-button">
+                <i class="fas fa-arrow-left"></i> All Projects
+            </a>
+
+            <!-- ===== PROJECT CONTENT ===== -->
+            <section class="project-detail">
+                <h2>Audit Reporting Automation &amp; Cost Optimization</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.2rem;">Primary developer – replaced a paid
+                    third-party reporting tool with an internally built automated solution.</p>
+
+                <!-- ===== OVERVIEW ===== -->
+                <div class="project-description">
+
+                    <h3>Overview</h3>
+                    <p>
+                        This project was undertaken to replace a paid third-party reporting solution,
+                        <strong>BusinessObjects</strong>, that was being used to generate daily audit reports for
+                        multiple clients.
+                    </p>
+                    <p>
+                        Each client had numerous data-processing jobs running on a scheduled batch system, where input
+                        files were received, processed, and either stored in database tables or transformed into output
+                        files delivered to the client. To monitor the health and completeness of these processes,
+                        detailed audit information was captured in audit tables — including the jobs that ran on a
+                        particular day, files received and processed, input and output record counts, rejected records,
+                        missing files, and other operational metrics.
+                    </p>
+                    <p>
+                        Previously, the Production Support Engineering team had to manually run BusinessObjects at the
+                        end of each day to generate these reports, which were then reviewed internally and shared with
+                        the respective client data teams for validation and issue investigation. The reports also
+                        contained several calculations and business rules used to derive the required audit metrics.
+                    </p>
+                    <p>
+                        Since the organisation was paying for BusinessObjects specifically for this reporting
+                        functionality, we identified an opportunity to eliminate the third-party dependency and build an
+                        equivalent solution internally.
+                    </p>
+
+                    <h3>The Challenge</h3>
+                    <p>
+                        The existing process had two significant drawbacks:
+                    </p>
+                    <ul>
+                        <li><strong>Cost</strong> — the company was paying for a third-party tool used solely for this
+                            reporting use case.</li>
+                        <li><strong>Manual dependency</strong> — the Production Support Engineering team had to run the
+                            tool manually every day, adding operational overhead.</li>
+                    </ul>
+                    <p>
+                        The added complexity was that the BusinessObjects reports contained embedded business logic and
+                        calculations that were not documented — they had to be reverse-engineered before they could be
+                        rebuilt.
+                    </p>
+
+                    <h3>What I Built</h3>
+                    <p>
+                        As the primary developer, I took ownership of reverse-engineering the existing BusinessObjects
+                        reporting logic, understanding the underlying audit tables and calculations, and rebuilding the
+                        entire reporting workflow in <strong>Python</strong>.
+                    </p>
+                    <p>
+                        The solution I developed:
+                    </p>
+                    <ul>
+                        <li>Directly consumed the raw <strong>audit data</strong> from the audit tables.</li>
+                        <li>Applied the required business logic and calculations to derive the audit metrics.</li>
+                        <li>Generated the complete <strong>daily audit report</strong> — eliminating the need for the
+                            Production Support Engineering team to manually execute the third-party process.</li>
+                    </ul>
+
+                    <!-- ===== ANOMALY DETECTION ===== -->
+                    <div class="phase-block">
+                        <h4>Automated Anomaly Identification</h4>
+                        <p>
+                            In addition to generating the report, the solution introduced <strong>automated anomaly
+                                detection</strong>. When predefined issues or unusual conditions were detected in the
+                            audit data, they were highlighted directly in the body of an automated email sent to the
+                            Production Support Engineering team lead. This allowed the team to quickly identify areas
+                            requiring investigation. The complete audit report was included as an attachment, which the
+                            support engineering team could review and forward to the relevant client data team.
+                        </p>
+                    </div>
+
+                    <!-- ===== SCALING ===== -->
+                    <div class="phase-block">
+                        <h4>Scaling Across Clients</h4>
+                        <p>
+                            I initially developed and validated the solution for <strong>one client</strong>. After
+                            establishing that the Python implementation correctly reproduced the required reporting
+                            logic, the solution was expanded to <strong>three additional clients</strong> with the
+                            support of one or two junior engineers working with me. I provided the core logic and
+                            direction while helping replicate and adapt the implementation for additional
+                            client-specific requirements.
+                        </p>
+                    </div>
+
+                    <h3>Results &amp; Impact</h3>
+                    <ul>
+                        <li><strong>Eliminated third-party dependency</strong> — removed the need for paid
+                            BusinessObjects licences for this use case, creating a direct cost saving and positively
+                            impacting the company's bottom line.</li>
+                        <li><strong>Fully automated</strong> — replaced a manual daily reporting process with an
+                            automated pipeline.</li>
+                        <li><strong>Standardised reporting</strong> — consistent generation of daily audit reports
+                            across all clients.</li>
+                        <li><strong>Improved anomaly visibility</strong> — automated highlighting of issues directly in
+                            email notifications.</li>
+                        <li><strong>Scaled to four clients</strong> — validated on one client before expanding, with
+                            mentorship of junior engineers.</li>
+                    </ul>
+
+                    <h3>Key Learnings</h3>
+                    <p>
+                        This project reinforced that the most valuable automation work often comes from replacing paid
+                        dependencies with well-understood internal solutions. Reverse-engineering undocumented business
+                        logic taught me to be methodical and to validate every assumption before rebuilding. I also
+                        learned the importance of building for scale from the start — designing the core logic so it
+                        could be adapted by others, rather than building a one-off solution for a single client.
+                    </p>
+
+                </div>
+
+                <!-- ===== TECH STACK ===== -->
+                <div class="project-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">BusinessObjects</span>
+                    <span class="skill-tag">Automation</span>
+                    <span class="skill-tag">Reporting</span>
+                    <span class="skill-tag">Anomaly Detection</span>
+                    <span class="skill-tag">Batch Processing</span>
+                </div>
+            </section>
+
+            <!-- ===== FOOTER ===== -->
+            <footer class="footer" style="margin-top: 3rem;">
+                <p>&copy; 2026 Barathwaj Maadhavan</p>
+            </footer>
+
+        </main>
+
+        <!-- ===== PAGE-SPECIFIC STYLES ===== -->
+        <style>
+            .back-button {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.9rem;
+                color: var(--text-muted);
+                text-decoration: none;
+                margin-bottom: 1.2rem;
+                transition: color 0.2s;
+            }
+
+            .back-button:hover {
+                color: var(--text-primary);
+            }
+
+            .project-description h3 {
+                font-family: 'Space Grotesk', -apple-system, sans-serif;
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: #555555;
+                margin: 1.6rem 0 0.4rem;
+            }
+
+            .project-description h3:first-of-type {
+                margin-top: 0;
+            }
+
+            .phase-block {
+                margin-bottom: 1.2rem;
+            }
+
+            .phase-block h4 {
+                font-family: 'Space Grotesk', -apple-system, sans-serif;
+                font-weight: 600;
+                font-size: 1rem;
+                color: #555555;
+                margin: 1rem 0 0.2rem;
+            }
+
+            .phase-block p {
+                font-family: 'Inter', sans-serif;
+                font-size: 1rem;
+                color: var(--text-secondary);
+                line-height: 1.8;
+                margin-bottom: 0.8rem;
+            }
+
+            .project-description p {
+                font-family: 'Inter', sans-serif;
+                font-size: 1rem;
+                color: var(--text-secondary);
+                line-height: 1.8;
+                margin-bottom: 0.8rem;
+            }
+
+            .project-description ul {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 1.2rem;
+            }
+
+            .project-description ul li {
+                position: relative;
+                padding-left: 20px;
+                margin-bottom: 0.4rem;
+                font-size: 0.95rem;
+                color: var(--text-secondary);
+                line-height: 1.6;
+            }
+
+            .project-description ul li::before {
+                content: '◆';
+                position: absolute;
+                left: 0;
+                color: var(--text-muted);
+                font-weight: 300;
+                font-size: 0.7rem;
+                top: 2px;
+            }
+
+            .project-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 0.8rem;
+            }
+
+            .project-tags .skill-tag {
+                font-size: 0.75rem;
+                font-weight: 500;
+                padding: 6px 16px;
+                border-radius: 100px;
+                background: rgba(0, 0, 0, 0.03);
+                border: 1px solid var(--border);
+                color: var(--text-secondary);
+            }
+
+            @media (max-width: 480px) {
+                .project-description h3 {
+                    font-size: 1rem;
+                }
+
+                .project-description p {
+                    font-size: 0.9rem;
+                }
+
+                .phase-block h4 {
+                    font-size: 0.95rem;
+                }
+
+                .phase-block p {
+                    font-size: 0.9rem;
+                }
+
+                .project-description ul li {
+                    font-size: 0.85rem;
+                    padding-left: 16px;
+                }
+
+                .project-tags .skill-tag {
+                    font-size: 0.7rem;
+                    padding: 4px 12px;
+                }
+            }
+        </style>
+
+    </body>
+
+</html>

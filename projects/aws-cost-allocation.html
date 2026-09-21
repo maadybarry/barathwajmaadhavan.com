@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AWS Cost Allocation &amp; Reporting Automation · Barathwaj Maadhavan</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+            rel="stylesheet" />
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+        <!-- Custom Styles -->
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+
+    <body>
+
+        <!-- ===== MAIN CONTAINER ===== -->
+        <main class="container">
+
+            <!-- ===== HEADER ===== -->
+            <header class="header" style="margin-bottom: 2rem;">
+                <h1>Barathwaj Maadhavan</h1>
+                <p class="tagline">AI Engineer · Forward Deployed Engineer</p>
+            </header>
+
+            <!-- ===== BACK BUTTON ===== -->
+            <a href="../index.html#projects" class="back-button">
+                <i class="fas fa-arrow-left"></i> All Projects
+            </a>
+
+            <!-- ===== PROJECT CONTENT ===== -->
+            <section class="project-detail">
+                <h2>AWS Cost Allocation &amp; Reporting Automation</h2>
+                <p style="color: var(--text-muted); margin-bottom: 1.2rem;">Sole developer – automated shared cloud cost
+                    allocation for a multi-client AWS portfolio.</p>
+
+                <!-- ===== OVERVIEW ===== -->
+                <div class="project-description">
+
+                    <h3>Overview</h3>
+                    <p>
+                        The AWS Cost Allocation &amp; Reporting project was undertaken to improve the accuracy,
+                        transparency, and efficiency of monthly cloud cost allocation for a portfolio of approximately
+                        <strong>five to six clients</strong> sharing the same AWS resources and infrastructure.
+                    </p>
+                    <p>
+                        Initially, the organisation relied on high-level AWS usage-percentage reports and a combination
+                        of Power BI dashboards and complex Excel spreadsheets spanning <strong>seven to eight
+                            sheets</strong>, containing numerous formulas and data sources to calculate and consolidate
+                        monthly costs for each client. This process was managed by the Production Support Engineering
+                        team and involved significant manual effort. More importantly, the existing approach used rough
+                        usage-based estimates that did not accurately reflect individual client consumption — some
+                        clients were charged approximately <strong>$100–$200</strong> even during months when they had
+                        not processed any data, leading to dissatisfaction and highlighting the need for a more precise
+                        cost allocation mechanism.
+                    </p>
+
+                    <h3>The Challenge</h3>
+                    <p>
+                        The existing cost allocation process suffered from two distinct problems:
+                    </p>
+                    <ul>
+                        <li><strong>Operational inefficiency</strong> — a highly manual monthly workflow involving AWS
+                            reports, Power BI dashboards, and multi-sheet Excel calculations.</li>
+                        <li><strong>Inaccurate allocation</strong> — rough usage-based estimates did not reflect actual
+                            client consumption, resulting in unfair charges and client dissatisfaction.</li>
+                    </ul>
+                    <p>
+                        The project was therefore split into two phases — first automating what existed, then fixing
+                        what was fundamentally wrong with the methodology.
+                    </p>
+
+                    <h3>What I Built</h3>
+
+                    <!-- ===== PHASE 1 ===== -->
+                    <div class="phase-block">
+                        <h4>Phase 1 — Automating the Existing Workflow</h4>
+                        <p>
+                            I developed a fully automated Python script that ran in the middle of each month. It:
+                        </p>
+                        <ul>
+                            <li>Retrieved raw cost and usage reports from <strong>AWS</strong>.</li>
+                            <li>Pulled relevant usage data from internal processes.</li>
+                            <li>Applied the existing cost-splitting formulas.</li>
+                            <li>Consolidated the results into monthly reports.</li>
+                            <li>Automatically distributed the reports to the account head via <strong>email</strong>.
+                            </li>
+                        </ul>
+                        <p>
+                            This eliminated the need for Production Support Engineers to manually extract data, maintain
+                            complex Excel calculations, and use Power BI to roll up monthly costs — improving
+                            operational efficiency and removing repetitive manual work.
+                        </p>
+                    </div>
+
+                    <!-- ===== PHASE 2 ===== -->
+                    <div class="phase-block">
+                        <h4>Phase 2 — Tag-Driven Accurate Allocation</h4>
+                        <p>
+                            While Phase 1 streamlined the process, it did not fix the underlying allocation methodology.
+                            In Phase 2, the project evolved into a <strong>more accurate, tag-driven cost allocation
+                                model</strong> that recognised different clients and infrastructure types required
+                            different cost-splitting approaches.
+                        </p>
+                        <p>
+                            I introduced a <strong>tagging mechanism</strong> for AWS servers and resources, where each
+                            tag determined how costs should be allocated:
+                        </p>
+                        <ul>
+                            <li><strong>Equal allocation</strong> — costs split evenly among all clients.</li>
+                            <li><strong>Hybrid allocation</strong> — a combination of equal and usage-based splits (e.g.
+                                50% equally, 50% by actual usage).</li>
+                            <li><strong>Direct assignment</strong> — costs assigned to a specific client.</li>
+                        </ul>
+                        <p>
+                            To support accurate usage attribution, background processes running on the shared servers
+                            were used to <strong>audit and identify processing activity</strong> associated with
+                            different clients. This established a clearer relationship between resource utilisation and
+                            individual client consumption.
+                        </p>
+                    </div>
+
+                    <h3>Results &amp; Impact</h3>
+                    <ul>
+                        <li><strong>Eliminated manual effort</strong> — replaced multi-sheet Excel workflows and Power
+                            BI roll-ups with a single automated script.</li>
+                        <li><strong>Improved allocation accuracy</strong> — tag-driven model reflected actual client
+                            consumption.</li>
+                        <li><strong>Fairer billing</strong> — clients that processed no data were no longer charged for
+                            idle infrastructure.</li>
+                        <li><strong>Positive client feedback</strong> — revised charges were significantly lower in
+                            certain cases and better aligned with actual usage.</li>
+                        <li><strong>Finance-ready reporting</strong> — detailed monthly cost reports delivered directly
+                            to Finance for client billing.</li>
+                    </ul>
+
+                    <h3>Key Learnings</h3>
+                    <p>
+                        This project taught me that automation alone is not enough — automating a flawed process simply
+                        produces flawed results faster. The real value came from questioning the underlying methodology
+                        and redesigning it around accurate, verifiable data. I also learned the importance of working
+                        closely with Finance and Support teams to understand both the technical and business sides of
+                        cost allocation.
+                    </p>
+
+                </div>
+
+                <!-- ===== TECH STACK ===== -->
+                <div class="project-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">AWS Cost Explorer</span>
+                    <span class="skill-tag">AWS Tagging</span>
+                    <span class="skill-tag">Automation</span>
+                    <span class="skill-tag">Reporting</span>
+                    <span class="skill-tag">Excel / Power BI</span>
+                </div>
+            </section>
+
+            <!-- ===== FOOTER ===== -->
+            <footer class="footer" style="margin-top: 3rem;">
+                <p>&copy; 2026 Barathwaj Maadhavan</p>
+            </footer>
+
+        </main>
+
+        <!-- ===== PAGE-SPECIFIC STYLES ===== -->
+        <style>
+            .back-button {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                font-family: 'Inter', sans-serif;
+                font-size: 0.9rem;
+                color: var(--text-muted);
+                text-decoration: none;
+                margin-bottom: 1.2rem;
+                transition: color 0.2s;
+            }
+
+            .back-button:hover {
+                color: var(--text-primary);
+            }
+
+            .project-description h3 {
+                font-family: 'Space Grotesk', -apple-system, sans-serif;
+                font-weight: 600;
+                font-size: 1.1rem;
+                color: #555555;
+                margin: 1.6rem 0 0.4rem;
+            }
+
+            .project-description h3:first-of-type {
+                margin-top: 0;
+            }
+
+            .phase-block {
+                margin-bottom: 1.2rem;
+            }
+
+            .phase-block h4 {
+                font-family: 'Space Grotesk', -apple-system, sans-serif;
+                font-weight: 600;
+                font-size: 1rem;
+                color: #555555;
+                margin: 1rem 0 0.2rem;
+            }
+
+            .phase-block p {
+                font-family: 'Inter', sans-serif;
+                font-size: 1rem;
+                color: var(--text-secondary);
+                line-height: 1.8;
+                margin-bottom: 0.8rem;
+            }
+
+            .project-description p {
+                font-family: 'Inter', sans-serif;
+                font-size: 1rem;
+                color: var(--text-secondary);
+                line-height: 1.8;
+                margin-bottom: 0.8rem;
+            }
+
+            .project-description ul {
+                list-style: none;
+                padding: 0;
+                margin: 0 0 1.2rem;
+            }
+
+            .project-description ul li {
+                position: relative;
+                padding-left: 20px;
+                margin-bottom: 0.4rem;
+                font-size: 0.95rem;
+                color: var(--text-secondary);
+                line-height: 1.6;
+            }
+
+            .project-description ul li::before {
+                content: '◆';
+                position: absolute;
+                left: 0;
+                color: var(--text-muted);
+                font-weight: 300;
+                font-size: 0.7rem;
+                top: 2px;
+            }
+
+            .project-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin-top: 0.8rem;
+            }
+
+            .project-tags .skill-tag {
+                font-size: 0.75rem;
+                font-weight: 500;
+                padding: 6px 16px;
+                border-radius: 100px;
+                background: rgba(0, 0, 0, 0.03);
+                border: 1px solid var(--border);
+                color: var(--text-secondary);
+            }
+
+            @media (max-width: 480px) {
+                .project-description h3 {
+                    font-size: 1rem;
+                }
+
+                .project-description p {
+                    font-size: 0.9rem;
+                }
+
+                .phase-block h4 {
+                    font-size: 0.95rem;
+                }
+
+                .phase-block p {
+                    font-size: 0.9rem;
+                }
+
+                .project-description ul li {
+                    font-size: 0.85rem;
+                    padding-left: 16px;
+                }
+
+                .project-tags .skill-tag {
+                    font-size: 0.7rem;
+                    padding: 4px 12px;
+                }
+            }
+        </style>
+
+    </body>
+
+</html>
