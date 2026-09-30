@@ -30,3 +30,34 @@ function rotateStatus() {
 
 setInterval(rotateStatus, 5000);
 statusElement.style.opacity = 1;
+
+// ===== FLOATING RESUME BUBBLE (hide on scroll, show when idle) =====
+document.addEventListener('DOMContentLoaded', function () {
+    const resumeFloat = document.querySelector('.resume-float');
+
+    if (!resumeFloat) {
+        console.warn('Resume bubble not found on this page');
+        return;
+    }
+
+    // Start visible
+    resumeFloat.style.opacity = '1';
+    resumeFloat.style.transition = 'opacity 0.35s ease, transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease';
+
+    let scrollTimeout;
+
+    window.addEventListener('scroll', () => {
+        // Hide while scrolling
+        resumeFloat.style.opacity = '0';
+        resumeFloat.style.pointerEvents = 'none';
+
+        // Clear previous timer
+        clearTimeout(scrollTimeout);
+
+        // Show again after scrolling stops for 400ms
+        scrollTimeout = setTimeout(() => {
+            resumeFloat.style.opacity = '1';
+            resumeFloat.style.pointerEvents = 'auto';
+        }, 400);
+    });
+});

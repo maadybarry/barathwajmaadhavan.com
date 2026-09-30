@@ -332,6 +332,39 @@ section.contact {
     color: var(--text-muted);
 }
 
+/* ===== FLOATING RESUME BUBBLE ===== */
+.resume-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 999;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 60px;
+    background: var(--text-primary);
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    opacity: 0.95;
+}
+
+.resume-float:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+    background: #000000;
+    opacity: 1;
+}
+
+.resume-float i {
+    font-size: 0.9rem;
+}
+
 /* ===== RESPONSIVE ===== */
 
 /* Tablets and small laptops */
@@ -526,5 +559,30 @@ section.contact {
 
     .footer p {
         font-size: 0.75rem;
+    }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+    .resume-float {
+        bottom: 18px;
+        right: 18px;
+        padding: 12px 16px;
+        font-size: 0.8rem;
+    }
+
+    /* Hide the label on very small screens, keep just the icon */
+    @media (max-width: 400px) {
+        .resume-float-text {
+            display: none;
+        }
+
+        .resume-float {
+            padding: 14px;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            justify-content: center;
+        }
     }
 }
