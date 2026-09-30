@@ -31,7 +31,7 @@ function rotateStatus() {
 setInterval(rotateStatus, 5000);
 statusElement.style.opacity = 1;
 
-// ====== FLOATING RESUME BUBBLE (hide on scroll, show when idle) ======
+// ===== FLOATING RESUME BUBBLE (hide on scroll, show when idle) =====
 document.addEventListener('DOMContentLoaded', function () {
     const resumeFloat = document.querySelector('.resume-float');
 
@@ -40,24 +40,29 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
+    let scrollTimeout;
+    let isScrolling = false;
+
     // Start visible
     resumeFloat.style.opacity = '1';
-    resumeFloat.style.transition = 'opacity 0.35s ease, transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease';
-
-    let scrollTimeout;
+    resumeFloat.style.pointerEvents = 'auto';
 
     window.addEventListener('scroll', () => {
-        // Hide while scrolling
-        resumeFloat.style.opacity = '0';
-        resumeFloat.style.pointerEvents = 'none';
+        // Only hide once when scrolling starts
+        if (!isScrolling) {
+            isScrolling = true;
+            resumeFloat.style.opacity = '0';
+            resumeFloat.style.pointerEvents = 'none';
+        }
 
-        // Clear previous timer
+        // Reset the timer on every scroll event
         clearTimeout(scrollTimeout);
 
-        // Show again after scrolling stops for 400ms
+        // Show again after scrolling has stopped for 1 second
         scrollTimeout = setTimeout(() => {
+            isScrolling = false;
             resumeFloat.style.opacity = '1';
             resumeFloat.style.pointerEvents = 'auto';
-        }, 400);
+        }, 1000); // ← increased from 400ms to 1000ms
     });
 });
