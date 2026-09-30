@@ -31,7 +31,7 @@ function rotateStatus() {
 setInterval(rotateStatus, 5000);
 statusElement.style.opacity = 1;
 
-// ===== FLOATING RESUME BUBBLE (hide on scroll, show when idle) =====
+// ====== FLOATING RESUME BUBBLE (hide on scroll, show when idle) ======
 document.addEventListener('DOMContentLoaded', function () {
     const resumeFloat = document.querySelector('.resume-float');
 
