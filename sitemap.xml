@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://barathwajmaadhavan.com/</loc>
+        <lastmod>2026-09-29</lastmod>
+    </url>
+
+    <!-- Main Pages -->
+    <url>
+        <loc>https://barathwajmaadhavan.com/watches.html</loc>
+        <lastmod>2026-09-29</lastmod>
+    </url>
+    <url>
+        <loc>https://barathwajmaadhavan.com/awards.html</loc>
+        <lastmod>2026-09-29</lastmod>
+    </url>
+
+    <!-- Project Pages -->
+    <url>
+        <loc>https://barathwajmaadhavan.com/projects/end-to-end-dev-agent.html</loc>
+        <lastmod>2026-09-29</lastmod>
+    </url>
+    <url>
+        <loc>https://barathwajmaadhavan.com/projects/rfp-automation.html</loc>
+        <lastmod>2026-09-29</lastmod>
+    </url>
+    <url>
+        <loc>https://barathwajmaadhavan.com/projects/learning-synthesis-agent.html</loc>
+        <lastmod>2026-09-29</lastmod>
+    </url>
+    <url>
+        <loc>https://barathwajmaadhavan.com/projects/genai-upskilling.html</loc>
+        <lastmod>2026-09-29</lastmod>
+    </url>
+    <url>
+        <loc>https://barathwajmaadhavan.com/projects/aws-cost-allocation.html</loc>
+        <lastmod>2026-09-29</lastmod>
+    </url>
+    <url>
+        <loc>https://barathwajmaadhavan.com/projects/audit-reporting-automation.html</loc>
+        <lastmod>2026-09-29</lastmod>
+    </url>
+    <url>
+        <loc>https://barathwajmaadhavan.com/projects/walkathon.html</loc>
+        <lastmod>2026-09-29</lastmod>
+    </url>
+
+</urlset>
