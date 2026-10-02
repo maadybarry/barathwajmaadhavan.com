@@ -1,0 +1,13 @@
+# Barathwaj Maadhavan
+
+> AI Engineer and Forward Deployed Engineer building autonomous systems that solve real business problems.
+
+This is the personal portfolio of Barathwaj Maadhavan. It contains detailed case studies of AI and automation projects, information on leadership initiatives, and a blog.
+
+## Key Pages
+
+- [Homepage](https://barathwajmaadhavan.com/): Introduction, experience, and skills.
+- [Projects](https://barathwajmaadhavan.com/#projects): Case studies on AI agents, automation, and cost optimization.
+- [Leadership & Training](https://barathwajmaadhavan.com/#leadership): Information on employee wellness and GenAI upskilling initiatives.
+- [Awards](https://barathwajmaadhavan.com/awards.html): Professional recognitions.
+- [Watch Collection](https://barathwajmaadhavan.com/watches.html): A personal collection of mechanical watches.
