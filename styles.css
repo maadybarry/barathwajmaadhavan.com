@@ -438,10 +438,6 @@ section.contact {
     opacity: 1;
 }
 
-.back-button i {
-    font-size: 0.75rem;
-}
-
 /* ===== FLOATING RESUME BUBBLE ===== */
 .resume-float {
     position: fixed;
@@ -841,15 +837,6 @@ section.contact {
         font-size: 0.92rem;
     }
 
-    .social-links {
-        gap: 16px;
-        margin-top: 1.2rem;
-    }
-
-    .social-links a {
-        font-size: 0.85rem;
-    }
-
     section {
         margin-bottom: 1.8rem;
         padding-bottom: 1rem;
@@ -960,15 +947,6 @@ section.contact {
     .bio,
     .tagline {
         font-size: 0.88rem;
-    }
-
-    .social-links {
-        gap: 14px;
-        margin-top: 1.2rem;
-    }
-
-    .social-links a {
-        font-size: 0.85rem;
     }
 
     section {
