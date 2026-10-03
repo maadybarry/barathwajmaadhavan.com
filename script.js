@@ -1,35 +1,71 @@
-// ===== ROTATING STATUS =====
-const statusMessages = [
-    "Waste no more time arguing what a good man should be. Be one.",
-    "You have power over your mind — not outside events.",
-    "The obstacle is the way.",
-    "What stands in the way becomes the way.",
-    "Discipline equals freedom.",
-    "Focus on what you can control.",
-    "Well begun is half done.",
-    "The best revenge is not to be like your enemy.",
-    "Luck is what happens when preparation meets opportunity.",
-    "It's not what happens to you, but how you react that matters.",
-    "First say to yourself what you would be; then do what you have to do.",
-    "No man is free who is not master of himself.",
-    "He who fears death will never do anything worth a man while he is alive.",
-    "If it is not right, do not do it. If it is not true, do not say it.",
-    "The happiness of your life depends upon the quality of your thoughts."
-];
-const statusElement = document.getElementById('statusText');
-let index = 0;
+// ===== SELECTED IMPACT — COUNT-UP ANIMATION =====
+(function () {
+    function initImpact() {
+        const values = document.querySelectorAll('.impact-value');
+        if (!values.length) return;
 
-function rotateStatus() {
-    statusElement.style.opacity = 0;
-    setTimeout(() => {
-        index = (index + 1) % statusMessages.length;
-        statusElement.textContent = statusMessages[index];
-        statusElement.style.opacity = 1;
-    }, 400);
-}
+        const prefersReducedMotion =
+            window.matchMedia &&
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-setInterval(rotateStatus, 5000);
-statusElement.style.opacity = 1;
+        function animateValue(el) {
+            const target = parseInt(el.dataset.target, 10);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+
+            if (isNaN(target)) return;
+
+            if (prefersReducedMotion) {
+                el.textContent = prefix + target + suffix;
+                return;
+            }
+
+            const duration = 2000;
+            const start = performance.now();
+
+            function tick(now) {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = Math.round(target * eased);
+                el.textContent = prefix + current + suffix;
+                if (progress < 1) {
+                    requestAnimationFrame(tick);
+                } else {
+                    el.textContent = prefix + target + suffix;
+                }
+            }
+
+            requestAnimationFrame(tick);
+        }
+
+        if (!('IntersectionObserver' in window)) {
+            values.forEach(animateValue);
+            return;
+        }
+
+        const observer = new IntersectionObserver(
+            function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        animateValue(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.1, rootMargin: '0px 0px -10% 0px' }
+        );
+
+        values.forEach(function (el) {
+            observer.observe(el);
+        });
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initImpact);
+    } else {
+        initImpact();
+    }
+})();
 
 // ===== FLOATING RESUME BUBBLE (hide on scroll, show when idle) =====
 document.addEventListener('DOMContentLoaded', function () {

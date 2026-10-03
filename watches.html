@@ -14,169 +14,71 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
             rel="stylesheet" />
 
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-
         <!-- Custom Styles -->
         <link rel="stylesheet" href="styles.css" />
     </head>
 
     <body>
 
-        <!-- ===== MAIN CONTAINER ===== -->
         <main class="container">
 
-            <!-- ===== HEADER ===== -->
-            <header class="header" style="margin-bottom: 2rem;">
+            <header class="header">
                 <h1>Barathwaj Maadhavan</h1>
-                <p class="tagline">AI Engineer · Forward Deployed Engineer</p>
+                <p class="tagline">AI Engineer · GenAI · Forward Deployed Engineer</p>
             </header>
 
-            <!-- ===== BACK BUTTON ===== -->
             <a href="index.html" class="back-button">
-                <i class="fas fa-arrow-left"></i> Back to home
+                &larr; Back to home
             </a>
 
-            <!-- ===== HERO IMAGE ===== -->
             <div class="watch-hero">
                 <img src="assets/images/watch_collection.jpg" alt="Watch Collection" class="watch-hero-image" />
             </div>
 
-            <!-- ===== WATCH LIST ===== -->
             <section class="watch-list">
                 <h2>My Collection</h2>
-                <p style="color: var(--text-muted); margin-bottom: 1.6rem;">A small but growing collection – each one
-                    with a story. Let's start from the left side !</p>
+                <p class="section-intro">A small but growing collection — each one with a story. Let's start from the
+                    left side.</p>
 
                 <ul class="watch-pointers">
                     <li>
                         <span class="watch-name">Tissot PRX (Quartz)</span>
-                        <span class="watch-desc">My first luxury watch – understated, integrated bracelet and punches
-                            way above it's weight. A gift from my father. </span>
+                        <span class="watch-desc">My first luxury watch — understated, integrated bracelet, and punches
+                            way above its weight. A gift from my father.</span>
                     </li>
                     <li>
                         <span class="watch-name">Casio A168 (Quartz)</span>
-                        <span class="watch-desc">First watch I bought with my own money. lightweight and reliable. But
-                            arm hair gets in the way sometimes lol.</span>
+                        <span class="watch-desc">First watch I bought with my own money. Lightweight and reliable —
+                            though arm hair gets in the way sometimes.</span>
                     </li>
                     <li>
                         <span class="watch-name">Seiko SRPD61K1 Desk Diver (Automatic)</span>
-                        <span class="watch-desc">First automatic I purchased, one of my most complimented
+                        <span class="watch-desc">First automatic I purchased. One of my most complimented
                             watches.</span>
                     </li>
                     <li>
                         <span class="watch-name">G-Shock GA2100 Casioak (Quartz)</span>
-                        <span class="watch-desc">Rugged and reliable piece, follows the shape of the legendary Audemars
+                        <span class="watch-desc">Rugged and reliable — follows the shape of the legendary Audemars
                             Piguet Royal Oak.</span>
                     </li>
                     <li>
                         <span class="watch-name">Orient Bambino Small Seconds (Automatic)</span>
-                        <span class="watch-desc">Finest dress watch I own, looks way more expensive than it actually is.
-                            Acquired this piece when I hit a financial milestone.</span>
+                        <span class="watch-desc">The finest dress watch I own. Looks way more expensive than it actually
+                            is. Acquired when I hit a financial milestone.</span>
                     </li>
                     <li>
                         <span class="watch-name">HMT Kohinoor (Quartz)</span>
-                        <span class="watch-desc">India's first watch company HMT, known for their durable and reliable
-                            quartz pieces. Was gifted by someone special to me.</span>
+                        <span class="watch-desc">From India's first watch company, HMT — known for durable, reliable
+                            quartz pieces. Gifted by someone special.</span>
                     </li>
                 </ul>
             </section>
 
-            <!-- ===== FOOTER ===== -->
-            <footer class="footer" style="margin-top: 3rem;">
+            <footer class="footer">
                 <p>&copy; 2026 Barathwaj Maadhavan</p>
             </footer>
 
         </main>
-
-        <!-- ===== PAGE-SPECIFIC STYLES ===== -->
-        <style>
-            .back-button {
-                display: inline-flex;
-                align-items: center;
-                gap: 8px;
-                font-family: 'Inter', sans-serif;
-                font-size: 0.9rem;
-                color: var(--text-muted);
-                text-decoration: none;
-                margin-bottom: 1.6rem;
-                transition: color 0.2s;
-            }
-
-            .back-button:hover {
-                color: var(--text-primary);
-            }
-
-            .watch-hero {
-                margin-bottom: 2rem;
-            }
-
-            .watch-hero-image {
-                width: 100%;
-                max-width: 600px;
-                border-radius: 12px;
-                border: 1px solid var(--border);
-                display: block;
-            }
-
-            .watch-pointers {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-
-            .watch-pointers li {
-                position: relative;
-                padding-left: 20px;
-                margin-bottom: 1.2rem;
-                display: flex;
-                flex-direction: column;
-            }
-
-            .watch-pointers li::before {
-                content: '◆';
-                position: absolute;
-                left: 0;
-                top: 2px;
-                color: var(--text-muted);
-                font-size: 0.7rem;
-            }
-
-            .watch-name {
-                font-family: 'Space Grotesk', sans-serif;
-                font-weight: 600;
-                font-size: 1rem;
-                color: #555555;
-                /* matches h3 color from homepage */
-            }
-
-            .watch-desc {
-                font-family: 'Inter', sans-serif;
-                font-size: 0.95rem;
-                color: var(--text-secondary);
-                /* matches list item color */
-                margin-top: 2px;
-            }
-
-            @media (max-width: 480px) {
-                .watch-hero-image {
-                    max-width: 100%;
-                }
-
-                .watch-name {
-                    font-size: 0.95rem;
-                }
-
-                .watch-desc {
-                    font-size: 0.85rem;
-                }
-
-                .watch-pointers li {
-                    padding-left: 16px;
-                    margin-bottom: 1rem;
-                }
-            }
-        </style>
 
     </body>
 
