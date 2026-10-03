@@ -10,4 +10,3 @@ This is the personal portfolio of Barathwaj Maadhavan. It contains detailed case
 - [Projects](https://barathwajmaadhavan.com/#projects): Case studies on AI agents, automation, and cost optimization.
 - [Leadership & Training](https://barathwajmaadhavan.com/#leadership): Information on employee wellness and GenAI upskilling initiatives.
 - [Awards](https://barathwajmaadhavan.com/awards.html): Professional recognitions.
-- [Watch Collection](https://barathwajmaadhavan.com/watches.html): A personal collection of mechanical watches.

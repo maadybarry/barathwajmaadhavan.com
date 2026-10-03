@@ -763,65 +763,6 @@ section.contact {
     }
 }
 
-/* ===== WATCHES PAGE ===== */
-.watch-hero {
-    margin-bottom: 2rem;
-}
-
-.watch-hero-image {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    display: block;
-}
-
-.watch-pointers {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.watch-pointers li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 1.2rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.watch-pointers li::before {
-    content: '◆';
-    position: absolute;
-    left: 0;
-    top: 2px;
-    color: var(--text-muted);
-    font-size: 0.7rem;
-}
-
-.watch-name {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    color: var(--text-primary);
-    line-height: 1.4;
-}
-
-.watch-desc {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-top: 2px;
-}
-
-.watch-list .section-intro {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    margin-bottom: 1.6rem;
-}
-
 /* ===== 404 PAGE ===== */
 .error-container {
     max-width: 500px;
@@ -1134,19 +1075,6 @@ section.contact {
     .phase-block ul li,
     .project-steps li {
         font-size: 0.88rem;
-    }
-
-    .watch-name {
-        font-size: 0.95rem;
-    }
-
-    .watch-desc {
-        font-size: 0.85rem;
-    }
-
-    .watch-pointers li {
-        padding-left: 16px;
-        margin-bottom: 1rem;
     }
 
     .error-code {
