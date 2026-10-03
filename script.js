@@ -20,7 +20,7 @@
                 return;
             }
 
-            const duration = 2000;
+            const duration = 2500;
             const start = performance.now();
 
             function tick(now) {
